@@ -17,20 +17,42 @@ public class PlayerMove : MonoBehaviour
             
         if(Input.GetKey(KeyCode.RightArrow))
         {
-            pos.x += 0.01f;
+            pos.x += 0.2f;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            pos.x -= 0.01f;
+            pos.x -= 0.2f;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            pos.z += 0.01f;
+            pos.z += 0.2f;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            pos.z -= 0.01f;
+            pos.z -= 0.2f;
         }
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                pos.x += 0.3f;
+            }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                pos.x -= 0.3f;
+            }
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                pos.z += 0.3f;
+            }
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                pos.z -= 0.3f;
+            }
+        }
+
         transform.position = new Vector3(pos.x, pos.y, pos.z); 
     }
 }

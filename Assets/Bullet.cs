@@ -15,11 +15,11 @@ public class Bullet : MonoBehaviour
     {
         Vector3 pos = transform.position;
 
-        pos.z += 0.05f;
+        pos.z += 0.5f;
 
         transform.position=new Vector3(pos.x, pos.y, pos.z);
 
-        if (pos.z >= 20) 
+        if (pos.z >= 50) 
         {
             Destroy(this.gameObject);
         }
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
             other.GetComponent<Enemy>().Damage();
 
             //’e‚ğŠÑ’Ê‚³‚¹‚È‚¢ˆ—
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
